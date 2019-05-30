@@ -4,9 +4,9 @@ Dado("que acesso o Sistema") do
   @selecao_page.link()
 end
   
-Quando('Seleciono o Produto e faço checkout') do 
+Quando("Seleciono o {string} e faço checkout") do |produto|
   @selecao_page = SelecaoProduto.new
-  @selecao_page.selecao()
+  @selecao_page.busca()
 end
 
 Quando('efetuo login com {string} e {string}') do |email, senha| #==> Efetua login .
